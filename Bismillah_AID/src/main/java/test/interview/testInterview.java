@@ -1,0 +1,501 @@
+package test.interview;
+
+import java.util.List;
+import java.util.*;
+import java.io.*;
+import org.apache.commons.*;
+import org.apache.commons.lang3.RandomStringUtils;
+
+public class testInterview {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		System.out.println("Hello World");
+		
+		//prime numbers: 
+		int number = 5;
+		System.out.println("The value : " + number + " : is = " + isPrime(number));
+		
+		//fibonacco series
+		int count = 10;
+		printFibonaccoSequence(10);
+		
+		//onlyOddNumber 
+		List<Integer> newList = new ArrayList<Integer>();
+		for(int i = 0; i <= count; i++) {
+			newList.add(i);
+		}
+		
+		System.out.println("Value of the newList : " + newList);
+		onlyOddNumber(newList);
+		
+		//Types of array
+		String[] populateStrg = {"one", "two", "three", "four", "five"};
+		String[] strg = new String[5];
+		for(int x = 0; x < strg.length; x++) {
+			
+			strg[x] = populateStrg[x];
+			
+		}
+		
+		Integer[] intg = new Integer[5];
+		for(int y = 0; y < intg.length; y++) {
+			
+			intg[y] = y;
+			
+		}
+		
+		Float[] flt = new Float[5];
+		for(float z = 1; z < flt.length; z++) {
+			
+			flt[(int) z] = z;
+			
+		}
+		
+		String newStrg = "Hello";
+		
+		
+		char[] chr = new char[5];
+		chr = newStrg.toCharArray();
+		
+		for(int a = 0; a < chr.length; a++) {
+			System.out.println("Values as follows : " + chr[a]);
+		}
+		
+		fileReader("/Users/preetheldhose/test_all/readThisFile.txt");
+		fileReaderUsingScanner("/Users/preetheldhose/test_all/readThisFile.txt", "Welcome");
+		fileReaderNCheckString("/Users/preetheldhose/test_all/readThisFile.txt", "Welcome");
+		printFile("/Users/preetheldhose/test_all/readThisFile.txt", "Welcome");
+		reverseAnArray("none");
+		swapUsing3rd(0, 1, 2);
+		swapWithUsing3rd(0, 1);
+		countWordsUsingHashMap();
+		iterateHashMap();
+		printArrayList();
+		findDuplicates();
+		findOutTheSecondLargest();
+		removeBlankSpacesInString();
+		replaceWhiteSpaces();
+		checkVowels();
+		checkIfOdd();
+		javaStringMethods();
+			
+	}
+	
+	public static boolean isPrime(int n) {
+		if( n ==0 || n ==1) {
+			return false;
+		}
+		
+		if (n ==2) {
+			return false;
+		}
+		
+		for(int i = 2 ; i <= n/2; i++) {
+			if(n % i == 0) {
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
+	public static void printFibonaccoSequence(int count) {
+		int a = 0;
+		int b = 1;
+		int c = 1;
+		
+		for(int i = 1; i < count; i++) {
+			System.out.println(a + ", ");
+			
+			a = b;
+			b = c;
+			c = a + b;
+		}
+			
+	}
+	
+	public static boolean onlyOddNumber(List<Integer> list) {
+		
+		for(int i : list) {
+			
+			if(i % 2 ==0) {
+				
+				return false;
+				
+			}
+			
+		}
+		
+		return true;
+	}
+	
+	public static void fileReader(String filePath) throws IOException {
+		File fileP = new File(filePath);
+		FileReader fr = null;
+		FileWriter fw = new FileWriter("/Users/preetheldhose/test_all/writeToThisFile.txt");
+		int i = 1;
+		String strAll = "";
+		if(fileP.exists()) {		
+			System.out.println("FileP : " + filePath + " : exists : ");		
+			if(fileP.isFile()) {			
+				System.out.println("FileP : " + filePath + " : is a file");
+				fr = new FileReader(filePath);
+				while( (i = fr.read()) != -1) {					
+					System.out.println("Value of the file are as follows : " + (char)i);
+					strAll += (char)i; 					
+				}				
+				System.out.println("StrAll : ");
+				System.out.println(strAll);				
+				System.out.println("About to write to a file :");
+				fw.write(strAll);								
+			} else {				
+				System.out.println("FileP : " + filePath + " : is a not a file");
+			}			
+		} else {
+			System.out.println("FileP : " +  filePath + " does not exists : ");
+		}
+		fr.close();
+		fw.close();
+	}
+	
+	public static void fileReaderUsingScanner(String filePath, String validateText) {
+		File FilePth = new File(filePath);
+		Scanner sC = new Scanner(filePath);
+		String currentLine = "";
+		while(sC.hasNextLine()) {
+			String line = sC.nextLine();
+			System.out.println("line value is as follows : " + line);
+		} 
+	}
+	
+	public static void fileReaderNCheckString(String filePath, String validateText) throws IOException {
+		
+        // list that holds strings of a file
+        List<String> listOfStrings = new ArrayList<String>();
+       
+        // load data from file
+        BufferedReader bf = new BufferedReader(new FileReader(filePath));
+       
+        // read entire line as string
+        String line = bf.readLine();
+       
+        // checking for end of file
+        while (line != null) {
+            listOfStrings.add(line);
+            line = bf.readLine();
+        }
+       
+        // closing bufferreader object
+        bf.close();
+       
+        // storing the data in arraylist to array
+        String[] array = listOfStrings.toArray(new String[0]);
+       
+        // printing each line of file
+        // which is stored in array
+        for (String str : array) {
+            System.out.println(str);
+        }
+ 
+	}
+	
+	
+	public static void printFile(String filePath, String validateString) {
+		try {
+			
+			BufferedReader br = new BufferedReader(new FileReader(filePath));
+			String line = "";
+			while((line = br.readLine()) != null) {
+				System.out.println("Execute : " + line);
+				if(line.contains(validateString)) {
+					System.out.println("Found it");
+				} else {
+					System.out.println("Didn't find it");
+				}
+			}
+			
+		} catch(Exception E) {
+			
+		}
+	}
+	
+	//reverse a string
+	public static void reverseAnArray(String strg) {
+		String str = "This is an array";
+		char[] ch = str.toCharArray();
+		int len = ch.length;
+		StringBuffer strBuf = new StringBuffer();
+		for(int i = len - 1; i >= 0; i-- ) {
+			//System.out.println(ch[i]);
+			strBuf.append(ch[i]);
+		}
+		
+		System.out.println(strBuf);
+		
+	}
+	
+	//swap using three variables.
+	public static void swapUsing3rd(int x, int y, int temp) {
+		x = 0; 
+		y = 0;
+		temp = 0;
+		System.out.println("Enter values for x and y");
+		Scanner in = new Scanner(System.in);
+		x = in.nextInt();
+		y = in.nextInt();
+		temp = x;
+		x = y;
+		y = temp;
+		
+		System.out.println("value of x : " + x + "\n" + "value of y : " + y);
+	}
+	
+	//swap using two variables
+	public static void swapWithUsing3rd(int x, int y) {
+		x = x + y;
+		y = x - y;
+		x = x -y ;
+		
+		System.out.println("value of x : " + x + "\n" + "value of y : " + y);
+		
+	}
+	
+	//count words using hashMap
+	public static void countWordsUsingHashMap() {
+		String[] str = {"one", "two", "three", "one", "fourth"};
+		HashMap<String, Integer> hs = new HashMap<String, Integer>();
+		//Map<String, Integer> hs = new TreeMap<String, Integer>();
+		int count = 0;
+		for(int i = 0; i < str.length; i++) {
+			if(hs.containsKey(str[i])) {			
+				hs.put(str[i],count++);
+			} else {
+				hs.put(str[i],1);
+			}
+		}
+		
+		for(Map.Entry<String, Integer> loadMP : hs.entrySet()) {
+			
+			System.out.println("Keys is : " + loadMP.getKey() + " " + "Values are as follows : " + loadMP.getKey());
+			
+		}
+	}
+	
+	//print hashMap using iterator
+	public static void iterateHashMap() {
+		
+		HashMap<String, Integer> hsMap = new HashMap<String, Integer>();
+		
+		for(int i =0; i < 15; i++) {
+			hsMap.put(passString(), randInt());
+		}
+		
+		Iterator itr = hsMap.entrySet().iterator();
+		while(itr.hasNext()) {
+			System.out.println("Values of itr are as follows : " + itr.next());
+		}
+		
+		for(Map.Entry<String, Integer> lhsMap : hsMap.entrySet()) {
+			System.out.println("Keys : " + lhsMap.getKey());
+			System.out.println("Value : " + lhsMap.getValue());
+		}
+		
+		
+	}
+	
+	//print array list
+	public static void printArrayList() {
+		List<String> ltArry = new ArrayList<String>();
+		
+		for(int i = 0; i < 100; i++) {
+			ltArry.add(passString());
+		}
+		
+		for(int i = 0; i < ltArry.size(); i++) {
+			System.out.println(ltArry.get(i));
+		}
+		
+		Iterator iArry = ltArry.iterator();
+		while(iArry.hasNext()) {
+			System.out.println("values : " + iArry.next());
+		}
+	}
+	
+	//find duplicates
+	public static void findDuplicates() {
+		String[] str = {"a", "a", "b", "c", "d", "e", "e", "f"};
+		HashMap<String, Integer> dupHSMap = new HashMap<String, Integer>();
+		int count = 0;
+		int checkValue = 0;
+
+		
+		for(int i = 0; i < str.length; i++) {
+			if(dupHSMap.containsKey(str[i])) {
+				dupHSMap.put(str[i], (dupHSMap.get(str[i]) + 1));
+				System.out.println("Type B : " + dupHSMap);
+			} else {
+				dupHSMap.put(str[i], 1);
+				System.out.println("Type C : " + dupHSMap);
+			}	
+		}
+		
+		System.out.println("Printing the values D : " + dupHSMap);
+		
+		for(Map.Entry<String, Integer> preDup : dupHSMap.entrySet()) {
+			if((checkValue = preDup.getValue()) > 1) {
+				System.out.println("Printing duplicates : " + preDup.getKey());
+			}
+		}
+		
+	}
+	
+	//find the second largest number
+	public static void findOutTheSecondLargest() {
+		//Algorithm:
+		//1/ define a int array
+		//2/ define an int variable "high", then equate the 1st element of the array to "high", 
+		//// then equate the 2nd element to high if 2nd element is greater "high" then assign "highest" to "high"
+		
+		int[] numbers = {1,2,3,4,5,200,10000, 100000, 1000000000};
+		int highest = 0;
+		int secondHighest = 0;
+
+		for(int i = 0; i < numbers.length; i++) {
+			if(numbers[i] >= highest) {
+				secondHighest = highest;
+				highest = numbers[i];
+			} else {
+				secondHighest = numbers[i];
+			}
+		}
+		
+		System.out.println("secondHighest : " + secondHighest);
+	}
+	
+	//remove all white spaces from the string.
+	public static void removeBlankSpacesInString() {
+		
+		String[] strg = {"abc", "def", "ghi", "", "123"};
+		StringBuffer blanksRemoved = new StringBuffer();
+		for(String str : strg) {
+			if(str.isEmpty()) {
+				System.out.println("Empty");
+			} else {
+				blanksRemoved.append(str);
+			}
+		}
+		
+		System.out.println("Final value : " + blanksRemoved);
+		
+		StringBuffer secondBlanksRemoved = new StringBuffer();
+		for(int i =0; i < strg.length; i++) {
+			if(strg[i].isEmpty()) {
+				System.out.println("Empty");
+			} else {
+				secondBlanksRemoved.append(strg[i]);
+			}
+		}
+		
+		System.out.println("secondBlanksRemoved value : " + secondBlanksRemoved);
+		
+	}
+	
+	//replace white spaces in a string using replace() method.
+	public static void replaceWhiteSpaces() {
+		
+		String[] strg = {"abc", "def", "ghi", "", "123"};
+		StringBuffer thisIsIt = new StringBuffer();
+		for(String str : strg) {
+			if(str.isEmpty()) {
+				thisIsIt.append(str.replace(str, "replaced"));
+				thisIsIt.append("$$$$$");
+			} else {
+				thisIsIt.append(str);
+				thisIsIt.append("*****");
+			}
+		}
+		
+		System.out.println("This is all : " + thisIsIt);
+		
+	}
+	
+	//check if vowels are present
+	public static void checkVowels() {
+		
+		
+		String sentence = "This a sentence of a time";
+		char[] chrS = sentence.toCharArray();
+		char[] vowels = {'a','e','i','o','u'};
+		
+		
+		for(int sent = 0; sent < chrS.length; sent++) {
+			for(int vow = 0; vow < vowels.length; vow++) {
+				if(chrS[sent] == vowels[vow]) {
+					System.out.println("Alphabet : " + chrS[sent] + " is a vowel");
+				} else {
+					System.out.println("Alphabet : " + chrS[sent] + " is NOT a vowel");
+				}
+			}
+		}
+		
+	}
+	
+	//use charAt() within string array and to check with if()
+	public static void charAtWithString() {
+		
+		
+		String sentence = "This a sentence of a time";
+		char[] chrS = sentence.toCharArray();
+		String[] vowels = {"a","e","i","o","u"};
+		
+		
+		for(int sent = 0; sent < chrS.length; sent++) {
+			for(int vow = 0; vow < vowels.length; vow++) {
+				//https://stackoverflow.com/questions/50887989/cannot-invoke-charatint-on-the-array-type-string
+				//char b = a[i].charAt(i);
+				if(chrS[sent] == vowels[vow].charAt(vow)) {
+					System.out.println("Alphabet : " + chrS[sent] + " is a vowel");
+				} else {
+					System.out.println("Alphabet : " + chrS[sent] + " is NOT a vowel");
+				}
+			}
+		}
+	}
+	
+	//check if the int array has only odd numbers.
+	public static void checkIfOdd() {
+		int[] inty = new int[10];
+		for(int i = 0; i < inty.length; i++) {
+			inty[i] = i;
+			if(inty[i] % 2 == 0) {
+				System.out.println("uhmmm");
+			} else {
+				System.out.println("Odd number : " + inty[i]);
+			}
+		}
+	}
+	
+	//java string methods:
+	public static void javaStringMethods() {
+		String str = "  This is a string  ";
+		System.out.println("Before Trim() :::::" + str + ":::::");
+		System.out.println("Removing leading and trailing spaces :::::" + str.trim() + ":::::");
+	}
+	
+	//pass/return randomString
+	public static String passString() {
+		int length = 10;
+		boolean useLetters = true;
+		boolean useNumbers = false;
+		String passString = RandomStringUtils.random(length, useLetters, useNumbers);
+		return passString;
+	}
+	
+	//pass/return randomIntegers
+	public static Integer randInt() {
+		Random rd = new Random();
+		Integer passInteger = rd.nextInt();
+		return passInteger;
+	}
+}
