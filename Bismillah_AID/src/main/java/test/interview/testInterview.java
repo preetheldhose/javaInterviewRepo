@@ -83,7 +83,11 @@ public class testInterview {
 		//splitStrNCallAlphabet("ABC");
 		//String str = "123-647-EYES";
 		
-		checkStr("123-647-EYES");
+		//checkStr("123-647-EYES");
+		
+		//Split the given word into 2 parts. Find the characters present in both parts of the string
+		//Part final
+		partsOfStringCompared("HelloWorld");
 
 
 	}
@@ -640,6 +644,15 @@ public class testInterview {
 		}		
 		return num;
 	}
+	
+	public static void partsOfStringCompared(String str) {
+		
+		char[] ch = str.toCharArray();
+		int lenCh = ch.length;
+		logger("Value of lenCh is as follows : ", Integer.toString(lenCh));
+
+		
+	}
 
 	// java string methods:
 	public static void javaStringMethods() {
@@ -662,5 +675,9 @@ public class testInterview {
 		Random rd = new Random();
 		Integer passInteger = rd.nextInt();
 		return passInteger;
+	}
+	
+	public static void logger(String strA, String strB) {
+		System.out.println(strA + " " + strB);
 	}
 }
