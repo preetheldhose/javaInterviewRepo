@@ -69,11 +69,22 @@ public class testInterview {
 		 * findStringInFile("/Users/preetheldhose/test_all/readThisFile.txt",
 		 * "Welcome"); printSinglePatterns(); printDoublePattern();
 		 */
-
+		
+		//Split the word into 2 part and find the sum of position of the character(s) present in both parts of the word. If A=1 and B=2 ...Z=26
+		//EX : Fr a given Word "Venkat" split it into 2 equal parts and find the sum of the postions VEN / KAT 22+5+14= 41/ 11+1+20 =3
+		//Part Final
+		
 		//numberGame("String");
 		//numberGame("String=");
+				
+		//Create a program that converts a phone number with letters to one with only numbers. 
+		//Part Final
 		
-		caller("ABC");
+		//splitStrNCallAlphabet("ABC");
+		//String str = "123-647-EYES";
+		
+		checkStr("123-647-EYES");
+
 
 	}
 
@@ -495,6 +506,9 @@ public class testInterview {
 		sc.close();
 	}
 
+	//Split the word into 2 part and find the sum of position of the character(s) present in both parts of the word. If A=1 and B=2 ...Z=26
+	//EX : Fr a given Word "Venkat" split it into 2 equal parts and find the sum of the postions VEN / KAT 22+5+14= 41/ 11+1+20 =3
+	//Part A	
 	public static void numberGame(String str) {
 		int len = str.length();
 		int preCount = 0;
@@ -518,19 +532,37 @@ public class testInterview {
 		System.out.println("preCount : " + preCount + " " + "postCount " + postCount + " " + " also final sum is as follows : " + (preCount + postCount));
 	}
 	
-	public static void checkStr() {
-		String str = "123-647-EYES";
+	//Create a program that converts a phone number with letters to one with only numbers. 
+	//Part A
+	public static void checkStr(String str) {
+		//String str = "123-647-EYES";
 		char[] chOther = str.toCharArray();
+		StringBuffer strA = new StringBuffer();
 		StringBuffer strB = new StringBuffer();
+		StringBuffer strF = new StringBuffer();
+		
 		for(int i = 0; i < chOther.length; i++) {
 			if(chOther[i] >= 'A' && chOther[i] <= 'Z') {
 				Character passValue = new Character(chOther[i]);
 				strB.append(splitStrNCallAlphabet(passValue.toString()));
+			} else if( (chOther[i] >= '0' && chOther[i] <= '9') || (chOther[i] == '-')) {
+				strA.append(chOther[i]);
+			} else {
+				System.out.println("Ayy0 ayyo");
 			}
 		}
-		System.out.println("string Buffer value : " + strB);
+		
+		strF.append(strA);
+		strF.append(strB);
+		
+		System.out.println("string BufferA's value : " + strA);
+		System.out.println("string BufferB's value : " + strB);
+		System.out.println("string Buffer Final's value : " + strF);
+		
 	}
 	
+	//Create a program that converts a phone number with letters to one with only numbers. 
+	//Part B
 	public static int splitStrNCallAlphabet(String callStr) {
 		char[] callStrCh = callStr.toCharArray();
 		int number = 0;
@@ -572,6 +604,8 @@ public class testInterview {
 		return number;		
 	}
 	
+	//Create a program that converts a phone number with letters to one with only numbers. 
+	//Part C
 	public static int giveNumberForAlphabet(String str) {
 		int num = 100;	
 		if(str.equals("")) {
@@ -602,7 +636,7 @@ public class testInterview {
 			 num = 8;
 		}		
 		if((str.equals("W")) || (str.equals("X")) || (str.equals("Y")) || (str.equals("Z"))) {
-			 num = 8;
+			 num = 9;
 		}		
 		return num;
 	}
