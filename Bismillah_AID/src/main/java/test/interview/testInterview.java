@@ -673,6 +673,16 @@ public class testInterview {
 			Character nCh = new Character(ch[right]);
 			logger("Left value : ", nCh.toString());
 		}
+		
+		for(int left = 0; left < lenCh/2; left++) {
+			logger(left,"is the value of left");
+			for(int right = lenCh-1; right >= lenCh/2; right--) {
+				logger(right,"is the value of right");
+
+			}
+
+		}
+		
 
 		
 	}
