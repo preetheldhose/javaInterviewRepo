@@ -664,6 +664,9 @@ public class testInterview {
 			logger("Left value : ", nCh.toString());
 		}
 
+		logger("","");
+		logger("","");
+		
 		for(int right = lenCh-1; right >= lenCh/2; right--) {
 			Character nCh = new Character(ch[right]);
 			logger("Left value : ", nCh.toString());
