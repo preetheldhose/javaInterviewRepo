@@ -707,7 +707,6 @@ public class testInterview {
 						//Character ncTr = new Character(ch[leftToRight]);
 						//String nStr = String.valueOf(ch[leftToRight]);
 						//int nInt = Integer.parseInt(nStr);
-						
 						mHS.put(String.valueOf(ch[leftToRight]), mHS.get(gMHS.getValue()+1));
 					} else {
 						mHS.put(String.valueOf(ch[leftToRight]), count++);
