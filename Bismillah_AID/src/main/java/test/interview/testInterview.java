@@ -658,6 +658,8 @@ public class testInterview {
 		logger("Value of lenCh is as follows : ", Integer.toString(lenCh));
 		
 		//HelloWorld
+		logger("","");
+		logger("","");
 	
 		for(int left = 0; left < lenCh/2; left++) {
 			Character nCh = new Character(ch[left]);
