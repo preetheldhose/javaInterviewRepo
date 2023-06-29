@@ -703,7 +703,7 @@ public class testInterview {
 		for(int leftToRight = 0; leftToRight < len; leftToRight++) {
 			for(int rightToLeft = len-1; rightToLeft >= 0; rightToLeft--) {
 				if(ch[leftToRight] == ch[rightToLeft]) {
-					if(!mHS.containsKey(ch[leftToRight])) {
+					if(mHS.containsKey(ch[leftToRight])) {
 						//Character ncTr = new Character(ch[leftToRight]);
 						//String nStr = String.valueOf(ch[leftToRight]);
 						//int nInt = Integer.parseInt(nStr);
