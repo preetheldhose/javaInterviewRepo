@@ -701,4 +701,16 @@ public class testInterview {
 	public static void logger(String strA, String strB) {
 		System.out.println(strA + " " + strB);
 	}
+	
+	public static void logger(String strA, int strB) {
+		System.out.println(strA + " " + strB);
+	}
+	
+	public static void logger(int strA, String strB) {
+		System.out.println(strA + " " + strB);
+	}
+	
+	public static void logger(int strA, int strB) {
+		System.out.println(strA + " " + strB);
+	}
 }
