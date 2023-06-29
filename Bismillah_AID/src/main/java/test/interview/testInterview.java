@@ -694,6 +694,24 @@ public class testInterview {
 		logger("StringBuffer value : ", finalChStrBuf);
 		
 	}
+	
+	//How to find the maximum occurring character in a given String?
+	public static void maxOccuranceOfStr() {
+		String str = "HelloWorld";
+		char[] ch = str.toCharArray();
+		int len = ch.length;
+		Map<String, Integer> mHS = new HashMap<String, Integer>();
+		for(int leftToRight = 0; leftToRight < len; leftToRight++) {
+			for(int rightToLeft = len-1; rightToLeft >= 0; rightToLeft--) {
+				if(ch[leftToRight] == ch[rightToLeft]) {
+					if(mHS.containsKey(ch[leftToRight])) {
+						mHS.put(ch[leftToRight], mHS.g)
+					}
+					
+				}
+			}
+		}
+	}
 
 	// java string methods:
 	public static void javaStringMethods() {
