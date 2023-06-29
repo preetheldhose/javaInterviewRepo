@@ -88,7 +88,13 @@ public class testInterview {
 		//Split the given word into 2 parts. Find the characters present in both parts of the string
 		//Part final
 		partsOfStringCompared("HelloWorld");
+		
+		//New code added below
+		
+		
 
+
+		
 
 	}
 
