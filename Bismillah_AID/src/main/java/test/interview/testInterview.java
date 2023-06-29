@@ -685,12 +685,9 @@ public class testInterview {
 				logger(ch[right],"is the value of right");
 				if(ch[left] == ch[right]) {
 					logger("match found : ", ch[left]);
-					finalChStrBuf.append(ch[left]);
-					
+					finalChStrBuf.append(ch[left]);					
 				} 
-
 			}
-
 		}
 		
 		logger("StringBuffer value : ", finalChStrBuf);
