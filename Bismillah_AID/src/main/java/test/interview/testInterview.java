@@ -656,6 +656,7 @@ public class testInterview {
 		char[] ch = str.toCharArray();
 		int lenCh = ch.length;
 		logger("Value of lenCh is as follows : ", Integer.toString(lenCh));
+		StringBuffer finalChStrBuf = new StringBuffer();
 		
 		//HelloWorld
 		logger("","");
@@ -681,15 +682,18 @@ public class testInterview {
 			logger("","");
 			logger("","");
 			for(int right = lenCh-1; right >= lenCh/2; right--) {
-
 				logger(ch[right],"is the value of right");
-
+				if(ch[left] == ch[right]) {
+					logger("match found : ", ch[left]);
+					finalChStrBuf.append(ch[left]);
+					
+				} 
 
 			}
 
 		}
 		
-
+		logger("StringBuffer value : ", finalChStrBuf);
 		
 	}
 
@@ -741,6 +745,10 @@ public class testInterview {
 	}
 	
 	public static void logger(char strA, char strB) {
+		System.out.println(strA + " " + strB);
+	}
+	
+	public static void logger(String strA, StringBuffer strB) {
 		System.out.println(strA + " " + strB);
 	}
 	
