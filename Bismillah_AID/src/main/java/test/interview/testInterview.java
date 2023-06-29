@@ -6,6 +6,7 @@ import java.io.*;
 import org.apache.commons.*;
 import org.apache.commons.lang3.RandomStringUtils;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class testInterview {
 
@@ -700,17 +701,24 @@ public class testInterview {
 		String str = "HelloWorld";
 		char[] ch = str.toCharArray();
 		int len = ch.length;
+		int count = 0;
 		Map<String, Integer> mHS = new HashMap<String, Integer>();
 		for(int leftToRight = 0; leftToRight < len; leftToRight++) {
 			for(int rightToLeft = len-1; rightToLeft >= 0; rightToLeft--) {
 				if(ch[leftToRight] == ch[rightToLeft]) {
 					if(mHS.containsKey(ch[leftToRight])) {
-						mHS.put(ch[leftToRight], mHS.g)
+						//Character ncTr = new Character(ch[leftToRight]);
+						//String nStr = String.valueOf(ch[leftToRight]);
+						//int nInt = Integer.parseInt(nStr);
+						Map.Entry<String, Integer> gMHS = (Entry<String, Integer>) mHS.entrySet();
+						mHS.put(String.valueOf(ch[leftToRight]), mHS.get(gMHS.getValue()+1));
+					} else {
+						mHS.put(String.valueOf(ch[leftToRight]), count++);
 					}
-					
 				}
 			}
 		}
+		logger("value of hashMap key & respective values are as follows : ", mHS);
 	}
 
 	// java string methods:
@@ -765,6 +773,10 @@ public class testInterview {
 	}
 	
 	public static void logger(String strA, StringBuffer strB) {
+		System.out.println(strA + " " + strB);
+	}
+	
+	public static void logger(String strA, Map<String, Integer> strB) {
 		System.out.println(strA + " " + strB);
 	}
 	
