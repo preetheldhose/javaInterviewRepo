@@ -677,7 +677,7 @@ public class testInterview {
 		for(int left = 0; left < lenCh/2; left++) {
 			logger("","");
 			logger("","");
-			logger(left,"is the value of left");
+			logger(lenCh[left],"is the value of left");
 			logger("","");
 			logger("","");
 			for(int right = lenCh-1; right >= lenCh/2; right--) {
@@ -731,4 +731,18 @@ public class testInterview {
 	public static void logger(int strA, int strB) {
 		System.out.println(strA + " " + strB);
 	}
+	
+	public static void logger(char strA, String strB) {
+		System.out.println(strA + " " + strB);
+	}
+	
+	public static void logger(String strA, char strB) {
+		System.out.println(strA + " " + strB);
+	}
+	
+	public static void logger(char strA, char strB) {
+		System.out.println(strA + " " + strB);
+	}
+	
+
 }
