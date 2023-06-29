@@ -651,6 +651,7 @@ public class testInterview {
 		return num;
 	}
 	
+	//A string divided by two and left to center is compared against right to center and the count generated and added.
 	public static void partsOfStringCompared(String str) {
 		
 		char[] ch = str.toCharArray();
