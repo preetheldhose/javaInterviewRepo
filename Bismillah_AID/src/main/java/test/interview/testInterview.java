@@ -681,11 +681,9 @@ public class testInterview {
 			logger("","");
 			logger("","");
 			for(int right = lenCh-1; right >= lenCh/2; right--) {
-				logger("","");
-				logger("","");
+
 				logger(right,"is the value of right");
-				logger("","");
-				logger("","");
+
 
 			}
 
