@@ -675,9 +675,17 @@ public class testInterview {
 		}
 		
 		for(int left = 0; left < lenCh/2; left++) {
+			logger("","");
+			logger("","");
 			logger(left,"is the value of left");
+			logger("","");
+			logger("","");
 			for(int right = lenCh-1; right >= lenCh/2; right--) {
+				logger("","");
+				logger("","");
 				logger(right,"is the value of right");
+				logger("","");
+				logger("","");
 
 			}
 
