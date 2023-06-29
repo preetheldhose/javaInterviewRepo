@@ -656,9 +656,16 @@ public class testInterview {
 		char[] ch = str.toCharArray();
 		int lenCh = ch.length;
 		logger("Value of lenCh is as follows : ", Integer.toString(lenCh));
+		
+		//HelloWorld
 	
 		for(int left = 0; left < lenCh/2; left++) {
 			Character nCh = new Character(ch[left]);
+			logger("Left value : ", nCh.toString());
+		}
+
+		for(int right = lenCh-1; right >= lenCh/2; right--) {
+			Character nCh = new Character(ch[right]);
 			logger("Left value : ", nCh.toString());
 		}
 
