@@ -692,30 +692,30 @@ public class testInterview {
 		
 	}
 	
-	//How to find the maximum occurring character in a given String?
-	public static void maxOccuranceOfStr() {
-		String str = "HelloWorld";
-		char[] ch = str.toCharArray();
-		int len = ch.length;
-		int count = 0;
-		Map<String, Integer> mHS = new HashMap<String, Integer>();
-		Map.Entry<String, Integer> gMHS = (Entry<String, Integer>) mHS.entrySet();
-		for(int leftToRight = 0; leftToRight < len; leftToRight++) {
-			for(int rightToLeft = len-1; rightToLeft >= 0; rightToLeft--) {
-				if(ch[leftToRight] == ch[rightToLeft]) {
-					if(mHS.containsKey(ch[leftToRight])) {
-						//Character ncTr = new Character(ch[leftToRight]);
-						//String nStr = String.valueOf(ch[leftToRight]);
-						//int nInt = Integer.parseInt(nStr);
-						mHS.put(String.valueOf(ch[leftToRight]), mHS.get(gMHS.getValue()+1));
-					} else {
-						mHS.put(String.valueOf(ch[leftToRight]), count++);
-					}
-				}
-			}
-		}
-		logger("value of hashMap key & respective values are as follows : ", mHS);
-	}
+//	//How to find the maximum occurring character in a given String?
+//	public static void maxOccuranceOfStr() {
+//		String str = "HelloWorld";
+//		char[] ch = str.toCharArray();
+//		int len = ch.length;
+//		int count = 0;
+//		Map<String, Integer> mHS = new HashMap<String, Integer>();
+//		Map.Entry<String, Integer> gMHS = (Entry<String, Integer>) mHS.entrySet();
+//		for(int leftToRight = 0; leftToRight < len; leftToRight++) {
+//			for(int rightToLeft = len-1; rightToLeft >= 0; rightToLeft--) {
+//				if(ch[leftToRight] == ch[rightToLeft]) {
+//					if(!mHS.containsKey(ch[leftToRight])) {
+//						//Character ncTr = new Character(ch[leftToRight]);
+//						//String nStr = String.valueOf(ch[leftToRight]);
+//						//int nInt = Integer.parseInt(nStr);
+//						mHS.put(String.valueOf(ch[leftToRight]), mHS.get(gMHS.getValue()+1));
+//					} else {
+//						mHS.put(String.valueOf(ch[leftToRight]), count++);
+//					}
+//				}
+//			}
+//		}
+//		logger("value of hashMap key & respective values are as follows : ", mHS);
+//	}
 
 	// java string methods:
 	public static void javaStringMethods() {
