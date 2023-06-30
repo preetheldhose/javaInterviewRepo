@@ -91,7 +91,9 @@ public class testInterview {
 		//partsOfStringCompared("HelloWorld");
 		
 		//maxOccuranceOfStr
-		maxOccuranceOfStr();
+		//maxOccuranceOfStr();
+		
+		maxOccuranceCharArray();
 		
 		//printHashMapViaArrayList();
 
@@ -725,6 +727,32 @@ public class testInterview {
 		//	}
 		}
 		logger("value of hashMap key & respective values are as follows : ", mHS);
+	}
+	
+	public static void maxOccuranceCharArray() {
+		String str = "This is a string";
+		char[] ch = str.toCharArray();
+		HashMap<Character, Integer> hMS = new HashMap<Character, Integer>();
+		Integer count = 0;
+		Integer nullValueAdd = 0;
+		for(int i = 0; i < ch.length; i++) {
+			if(hMS.get(ch[i]) == null) {
+				nullValueAdd++;
+			} else {
+				nullValueAdd = hMS.get(ch[i])+1;
+			}
+			//if(hMS.putIfAbsent(ch[i], nullValueAdd) != null) {
+			if(!hMS.containsKey(ch[i])) {
+				hMS.put(ch[i], nullValueAdd);
+			} else {
+				hMS.put(ch[i], count++);
+			}
+			
+		}
+		
+		for(Map.Entry<Character, Integer> mHSM : hMS.entrySet()) {
+			System.out.println("Keys and values are : " + mHSM.getKey() + " " + mHSM.getKey());
+		}
 	}
 	
 	public static void printHashMapViaArrayList() {
