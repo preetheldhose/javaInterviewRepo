@@ -867,6 +867,18 @@ public class testInterview {
 			System.out.println("Values of set Iterator : " + setItr.next());
 		}
 		
+		//Convert HashMap to ArrayList
+		collection.clear();
+		HashMap<String, String> hs = new HashMap<String, String>();
+		for(Entry<String, String> mhsMAR : hs.entrySet()) {
+			collection.add(mhsMAR.getKey());
+			collection.add(mhsMAR.getValue());
+		}
+		
+		for(String str : collection) {
+			logger("Values of the array are as follows : ", str);
+		}
+		
 	}
 
 	// java string methods:
