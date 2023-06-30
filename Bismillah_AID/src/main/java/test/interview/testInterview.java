@@ -892,22 +892,21 @@ public class testInterview {
 	public static void longestCommonPrefixs() {
 		//String[] strComPrefix = {"geeksforgeeks", "geeks", "geek", "geezer"};
 		String[] strComPrefix = {"geeksforgeeks"};
+		
 		int count = 0;
 		int previousCount = 1;
 		StringBuffer strBuf = new StringBuffer();
 		for(String str : strComPrefix) {
 			char[] ch = str.toCharArray();
+			int wholeLength = ch.length;
 			for(int i =0; i < ch.length; i++) {
-				//System.out.println("i- values : " + ch[i]);
-			for(int j = ch.length-1; j > 0; j--) {
-				//System.out.println("j- values : " + ch[j]);
-					if(ch[i] == ch[j]) {
-						count++;
-						if(count >= previousCount) {
-							strBuf.append(ch[i]);
-						}
+				if(ch[i] == ch[wholeLength--]) {
+					count++;
+					if(count >= previousCount) {
+						strBuf.append(ch[i]);
 					}
-			}
+					
+				}
 			}
 		}
 		
