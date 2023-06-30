@@ -915,6 +915,10 @@ public class testInterview {
 		System.out.println("Longest common prefix is as follows : " + strBuf);
 
 	}
+	
+	public static void newCode() {
+		
+	}
 
 	// java string methods:
 	public static void javaStringMethods() {
