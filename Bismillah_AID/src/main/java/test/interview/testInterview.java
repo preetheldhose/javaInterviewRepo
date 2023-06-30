@@ -876,7 +876,7 @@ public class testInterview {
 		}
 		
 		for(String str : collection) {
-			logger("Values of the array are as follows : ", str);
+			System.out.println("Values of the array are as follows : "+ str);
 		}
 		
 	}
