@@ -929,15 +929,27 @@ public class testInterview {
 		String[] strComPrefix = {"geeksforgeeks"};
 		
 		int count = 0;
-		int previousCount = 0;
+		int blankValueAdd = 0;
 		StringBuffer strBuf = new StringBuffer();
+		HashMap<Character, Integer> hs = new HashMap<Character, Integer>();
 		for(String str : strComPrefix) {
 			char[] ch = str.toCharArray();
 			int wholeLength = ch.length-1;
 			for(int i =0; i < ch.length; i++) {
 				System.out.println("i- values : " + ch[i]);
-
+				if(hs.containsKey(ch[i])) {
+					if(hs.get(ch[i]) == null) {
+						blankValueAdd++;				
+					}
+					hs.put(ch[i], blankValueAdd);
+				} else {
+					hs.put(ch[i], 1);
+				}
 			}
+		}
+		
+		for(Map.Entry<Character, Integer> mHSM : hs.entrySet()) {
+			System.out.println("Keys and values are as follows : " + mHSM.getKey() + " " + mHSM.getValue());
 		}
 		
 	}
