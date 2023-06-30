@@ -802,7 +802,7 @@ public class testInterview {
 		ArrayList<Character> al = new ArrayList<Character>();
 		HashMap<Character, Integer> hs = new HashMap<Character, Integer>();
 		int blankValueAdd = 0;
-		for(int i = 0; i < al.size(); i ++) {
+		for(int i = 0; i < str.length(); i ++) {
 			al.add(str.charAt(i));
 			if(hs.containsKey(al.get(i))) {
 				if(al.get(i) == null) {
