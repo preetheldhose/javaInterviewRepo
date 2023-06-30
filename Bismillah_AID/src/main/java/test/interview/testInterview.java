@@ -92,11 +92,12 @@ public class testInterview {
 		
 		//maxOccuranceOfStr
 		//maxOccuranceOfStr();
-		maxOccuranceCharArray();
-		maxOccuranceCharacterArrayList();
+		//maxOccuranceCharArray();
+		//maxOccuranceCharacterArrayList();
 
-		
 		//printHashMapViaArrayList();
+		
+		printPermutationValues();
 
 	}
 
@@ -793,8 +794,31 @@ public class testInterview {
 		for (Map.Entry<Character, Integer> mHSM : hSM.entrySet()) {
 			System.out.println("Character is :"+mHSM.getKey()+ " and its count is string is "+ mHSM.getValue());
 		}
-		
 
+	}
+	
+	public static void printPermutationValues() {
+		String str = "This is a string";
+		ArrayList<Character> al = new ArrayList<Character>();
+		HashMap<Character, Integer> hs = new HashMap<Character, Integer>();
+		int blankValueAdd = 0;
+		for(int i = 0; i < al.size(); i ++) {
+			al.add(str.charAt(i));
+			if(hs.containsKey(al.get(i))) {
+				if(al.get(i) == null) {
+					blankValueAdd++;
+				} else {
+					blankValueAdd = hs.get(al.get(i)) + 1;
+				}
+				hs.put(al.get(i), blankValueAdd);
+			} else {
+				hs.put(al.get(i), 1);
+			}	
+		}
+		
+		for(Map.Entry<Character, Integer> mhsM : hs.entrySet()) {
+			System.out.println("Keys and values are as follows : " + mhsM.getKey() + " " + mhsM.getValue());
+		}
 	}
 
 	// java string methods:
