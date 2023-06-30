@@ -733,7 +733,6 @@ public class testInterview {
 		String str = "This is a string";
 		char[] ch = str.toCharArray();
 		HashMap<Character, Integer> hMS = new HashMap<Character, Integer>();
-		Integer count = 0;
 		Integer nullValueAdd = 0;
 		for(int i = 0; i < ch.length; i++) {
 			if(hMS.get(ch[i]) == null) {
@@ -742,10 +741,10 @@ public class testInterview {
 				nullValueAdd = hMS.get(ch[i])+1;
 			}
 			//if(hMS.putIfAbsent(ch[i], nullValueAdd) != null) {
-			if(!hMS.containsKey(ch[i])) {
+			if(hMS.containsKey(ch[i])) {
 				hMS.put(ch[i], nullValueAdd);
 			} else {
-				hMS.put(ch[i], count++);
+				hMS.put(ch[i], 1);
 			}
 			
 		}
