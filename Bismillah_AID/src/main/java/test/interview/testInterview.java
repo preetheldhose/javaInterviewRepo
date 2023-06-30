@@ -868,7 +868,7 @@ public class testInterview {
 		}
 		
 		//Convert HashMap to ArrayList
-		collection.clear();
+		//collection.clear();
 		HashMap<String, String> hs = new HashMap<String, String>();
 		for(int i = 0; i < collection.size(); i++) {
 			hs.put(((List<String>) collection).get(i),"");
