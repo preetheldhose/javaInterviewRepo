@@ -834,14 +834,22 @@ public class testInterview {
 			System.out.println("Data as follows : " + itr.next());
 		}
 		
+		logger("","");
+		logger("","");
+		
 		for (String str : collection) {
 			System.out.println("For 1st set of values : " + str);
 		}
 		
+		logger("","");
+		logger("","");
+		
 		for(Iterator<String> itrL = collection.iterator(); itrL.hasNext();) {
 			System.out.println("For 2nd set of values : " + itrL.next());
-			
 		}
+		
+		logger("","");
+		logger("","");
 		
 	}
 
