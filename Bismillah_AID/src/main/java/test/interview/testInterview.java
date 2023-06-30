@@ -723,8 +723,8 @@ public class testInterview {
 	public static void printHashMapViaArrayList() {
 		
 		String str = "This is a string";
-		List<Character> lAL = new ArrayList<Character>();
-		for(int i = 0; i < lAL.size(); i++) {
+		ArrayList<Character> lAL = new ArrayList<Character>();
+		for(int i = 0; i < str.length(); i++) {
 			lAL.add(str.charAt(i));
 		}
 		
