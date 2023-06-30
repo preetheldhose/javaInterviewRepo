@@ -729,6 +729,17 @@ public class testInterview {
 		}
 		
 		logger("Print the value of Character list", lAL);
+		
+		HashMap<Character, Integer> hSM = new HashMap<Character, Integer>();
+		for(int j = 0; j < str.length(); j++) {
+			hSM.putIfAbsent(lAL.get(j),Collections.frequency(lAL,lAL.get(j)));
+		}
+		
+		for (Map.Entry<Character, Integer> mHSM : hSM.entrySet()) {
+			System.out.println("Character is :"+mHSM.getKey()+ " and its count is string is "+ mHSM.getValue());
+		}
+		
+
 	}
 
 	// java string methods:
