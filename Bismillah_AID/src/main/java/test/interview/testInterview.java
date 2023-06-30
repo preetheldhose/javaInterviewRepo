@@ -97,7 +97,9 @@ public class testInterview {
 		//printHashMapViaArrayList();
 		//printPermutationValues();
 		
-		allWaysToPrintCollections();
+		//allWaysToPrintCollections();
+		
+		longestCommonPrefixs();
 
 	}
 
@@ -884,8 +886,30 @@ public class testInterview {
 			System.out.println("hashMap key : " + mhsMAR.getKey());
 			System.out.println("hashMap value : " + mhsMAR.getValue());
 		}
-
 		
+	}
+	
+	public static void longestCommonPrefixs() {
+		String[] strComPrefix = {"geeksforgeeks", "geeks", "geek", "geezer"};
+		int count = 0;
+		int previousCount = 1;
+		StringBuffer strBuf = new StringBuffer();
+		for(String str : strComPrefix) {
+			char[] ch = str.toCharArray();
+			for(int i =0; i < ch.length; i++) {
+				for(int j = ch.length-1; j > 0; j++) {
+					if(ch[i] == ch[j]) {
+						count++;
+						if(count >= previousCount) {
+							strBuf.append(ch[i]);
+						}
+					}
+				}
+			}
+		}
+		
+		System.out.println("Longest common prefix is as follows : " + strBuf);
+
 	}
 
 	// java string methods:
