@@ -936,7 +936,7 @@ public class testInterview {
 			char[] ch = str.toCharArray();
 			int wholeLength = ch.length-1;
 			for(int i =0; i < ch.length; i++) {
-				System.out.println("i- values : " + ch[i]);
+				//System.out.println("i- values : " + ch[i]);
 				if(hs.containsKey(ch[i])) {
 					if(hs.get(ch[i]) == null) {
 						blankValueAdd++;				
