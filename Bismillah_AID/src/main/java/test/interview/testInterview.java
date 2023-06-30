@@ -894,7 +894,7 @@ public class testInterview {
 		String[] strComPrefix = {"geeksforgeeks"};
 		
 		int count = 0;
-		int previousCount = 1;
+		int previousCount = 0;
 		StringBuffer strBuf = new StringBuffer();
 		for(String str : strComPrefix) {
 			char[] ch = str.toCharArray();
@@ -904,9 +904,14 @@ public class testInterview {
 				for(int j = ch.length-1; j >= 0; j--) {
 					System.out.println("j- values : " + ch[j]);
 					if(ch[i] == ch[j]) {
-						strBuf.append(ch[i]);
-						System.out.println("inside  : " + strBuf);
-						break;
+						count++;
+						if(count > previousCount)  {
+							strBuf.append(ch[i]);
+							System.out.println("inside  : " + strBuf);
+							count = 0;
+							break;
+						}
+
 					}
 				}				
 			}
@@ -916,9 +921,7 @@ public class testInterview {
 
 	}
 	
-	public static void newCode() {
-		
-	}
+
 
 	// java string methods:
 	public static void javaStringMethods() {
