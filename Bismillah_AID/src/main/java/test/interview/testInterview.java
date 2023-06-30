@@ -834,6 +834,10 @@ public class testInterview {
 			System.out.println("Data as follows : " + itr.next());
 		}
 		
+		for (String str : collection) {
+			System.out.println("Values : " + str);
+		}
+		
 	}
 
 	// java string methods:
