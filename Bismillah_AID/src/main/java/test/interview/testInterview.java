@@ -757,7 +757,7 @@ public class testInterview {
 	public static void maxOccuranceCharacterArrayList() {
 		String str = "This is a string";
 		ArrayList<Character> al = new ArrayList<Character>();
-		for(int i = 0; i < str.size(); i++) {
+		for(int i = 0; i < str.length(); i++) {
 			al.add(str.charAt(i));
 		}
 		System.out.println("ArrayList : " + al);
