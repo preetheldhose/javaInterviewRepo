@@ -939,7 +939,9 @@ public class testInterview {
 				//System.out.println("i- values : " + ch[i]);
 				if(hs.containsKey(ch[i])) {
 					if(hs.get(ch[i]) == null) {
-						blankValueAdd++;				
+						blankValueAdd = 1;				
+					} else {
+						blankValueAdd = hs.get(ch[i]) + 1;
 					}
 					hs.put(ch[i], blankValueAdd);
 				} else {
