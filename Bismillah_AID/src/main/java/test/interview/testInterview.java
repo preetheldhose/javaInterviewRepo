@@ -832,6 +832,7 @@ public class testInterview {
 		logger("","");
 		logger("","");
 		
+		//Iterator value
 		Iterator<String> itr = collection.iterator();
 		while(itr.hasNext()) {
 			System.out.println("Data as follows : " + itr.next());
@@ -840,15 +841,17 @@ public class testInterview {
 		logger("","");
 		logger("","");
 		
-		for (String str : collection) {
-			System.out.println("For 1st set of values : " + str);
+		//For loop
+		for(Iterator<String> itrL = collection.iterator(); itrL.hasNext();) {
+			System.out.println("For 2nd set of values : " + itrL.next());
 		}
 		
 		logger("","");
 		logger("","");
 		
-		for(Iterator<String> itrL = collection.iterator(); itrL.hasNext();) {
-			System.out.println("For 2nd set of values : " + itrL.next());
+		//ForEach
+		for (String str : collection) {
+			System.out.println("For 1st set of values : " + str);
 		}
 		
 		logger("","");
