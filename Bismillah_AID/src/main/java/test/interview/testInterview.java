@@ -905,6 +905,7 @@ public class testInterview {
 					System.out.println("j- values : " + ch[j]);
 					if(ch[i] == ch[j]) {
 						strBuf.append(ch[i]);
+						System.out.println("inside  : " + strBuf);
 					}
 				}				
 			}
