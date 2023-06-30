@@ -829,6 +829,9 @@ public class testInterview {
 		collection.add("feb");
 		collection.add("mar");
 		
+		logger("","");
+		logger("","");
+		
 		Iterator<String> itr = collection.iterator();
 		while(itr.hasNext()) {
 			System.out.println("Data as follows : " + itr.next());
