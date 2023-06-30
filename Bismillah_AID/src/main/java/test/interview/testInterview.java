@@ -74,7 +74,6 @@ public class testInterview {
 		//Split the word into 2 part and find the sum of position of the character(s) present in both parts of the word. If A=1 and B=2 ...Z=26
 		//EX : Fr a given Word "Venkat" split it into 2 equal parts and find the sum of the postions VEN / KAT 22+5+14= 41/ 11+1+20 =3
 		//Part Final
-		
 		//numberGame("String");
 		//numberGame("String=");
 				
@@ -96,8 +95,9 @@ public class testInterview {
 		//maxOccuranceCharacterArrayList();
 
 		//printHashMapViaArrayList();
+		//printPermutationValues();
 		
-		printPermutationValues();
+		allWaysToPrintCollections();
 
 	}
 
@@ -819,6 +819,21 @@ public class testInterview {
 		for(Map.Entry<Character, Integer> mhsM : hs.entrySet()) {
 			System.out.println("Keys and values are as follows : " + mhsM.getKey() + " " + mhsM.getValue());
 		}
+	}
+	
+	public static void allWaysToPrintCollections() {
+		
+		Collection<String> collection = new ArrayList<String>();
+		
+		collection.add("Jan");
+		collection.add("feb");
+		collection.add("mar");
+		
+		Iterator<String> itr = collection.iterator();
+		while(itr.hasNext()) {
+			System.out.println("Data as follows : " + itr.next());
+		}
+		
 	}
 
 	// java string methods:
