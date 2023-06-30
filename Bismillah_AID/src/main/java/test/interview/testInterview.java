@@ -712,7 +712,11 @@ public class testInterview {
 						//int nInt = Integer.parseInt(nStr);
 						//Map.Entry<Character, Integer> gMHS = (Entry<Character, Integer>) mHS.entrySet();
 						//mHS.put(ch[leftToRight], mHS.get(gMHS.getValue()+1));
-						valueAdd = mHS.get(ch[leftToRight]) + 1;
+						if(mHS.get(ch[leftToRight]) == null) {
+							valueAdd++;
+						} else {
+							valueAdd = mHS.get(ch[leftToRight]) + 1;
+						}			
 						mHS.put(ch[leftToRight], valueAdd);
 					} else {
 						mHS.put(ch[leftToRight], 1);
