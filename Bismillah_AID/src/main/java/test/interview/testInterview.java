@@ -91,7 +91,7 @@ public class testInterview {
 		//partsOfStringCompared("HelloWorld");
 		
 		//maxOccuranceOfStr
-		maxOccuranceOfStr();
+		//maxOccuranceOfStr();
 
 	}
 
@@ -692,14 +692,14 @@ public class testInterview {
 		
 	}
 	
-//	//How to find the maximum occurring character in a given String?
+////	//How to find the maximum occurring character in a given String?
 //	public static void maxOccuranceOfStr() {
 //		String str = "HelloWorld";
 //		char[] ch = str.toCharArray();
 //		int len = ch.length;
 //		int count = 0;
-//		Map<String, Integer> mHS = new HashMap<String, Integer>();
-//		Map.Entry<String, Integer> gMHS = (Entry<String, Integer>) mHS.entrySet();
+//		Map<Character, Integer> mHS = new HashMap<Character, Integer>();
+//		
 //		for(int leftToRight = 0; leftToRight < len; leftToRight++) {
 //			for(int rightToLeft = len-1; rightToLeft >= 0; rightToLeft--) {
 //				if(ch[leftToRight] == ch[rightToLeft]) {
@@ -707,15 +707,27 @@ public class testInterview {
 //						//Character ncTr = new Character(ch[leftToRight]);
 //						//String nStr = String.valueOf(ch[leftToRight]);
 //						//int nInt = Integer.parseInt(nStr);
-//						mHS.put(String.valueOf(ch[leftToRight]), mHS.get(gMHS.getValue()+1));
+//						Map.Entry<Character, Integer> gMHS = (Entry<Character, Integer>) mHS.entrySet();
+//						mHS.put(ch[leftToRight], mHS.get(gMHS.getValue()+1));
 //					} else {
-//						mHS.put(String.valueOf(ch[leftToRight]), count++);
+//						mHS.put(ch[leftToRight], count++);
 //					}
 //				}
 //			}
 //		}
 //		logger("value of hashMap key & respective values are as follows : ", mHS);
 //	}
+	
+	public static void printHashMapViaArrayList() {
+		
+		String str = "This is a string";
+		List<Character> lAL = new ArrayList<Character>();
+		for(int i = 0; i < lAL.size(); i++) {
+			lAL.add(str.charAt(i));
+		}
+		
+		logger("Print the value of Character list", lAL);
+	}
 
 	// java string methods:
 	public static void javaStringMethods() {
@@ -772,8 +784,16 @@ public class testInterview {
 		System.out.println(strA + " " + strB);
 	}
 	
-	public static void logger(String strA, Map<String, Integer> strB) {
-		System.out.println(strA + " " + strB);
+//	public static void logger(String strA, Map<String, Integer> strB) {
+//		System.out.println(strA + " " + strB);
+//	}
+	
+	public static void logger(String strX, Map<Character, Integer> strB) {
+		System.out.println(strX + " " + strB);
+	}
+	
+	public static void logger(String strX, List<Character> strB) {
+		System.out.println(strX + " " + strB);
 	}
 	
 
