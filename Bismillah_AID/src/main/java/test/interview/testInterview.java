@@ -92,6 +92,8 @@ public class testInterview {
 		
 		//maxOccuranceOfStr
 		//maxOccuranceOfStr();
+		
+		printHashMapViaArrayList();
 
 	}
 
