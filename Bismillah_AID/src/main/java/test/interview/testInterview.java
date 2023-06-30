@@ -709,10 +709,11 @@ public class testInterview {
 						//Character ncTr = new Character(ch[leftToRight]);
 						//String nStr = String.valueOf(ch[leftToRight]);
 						//int nInt = Integer.parseInt(nStr);
-						Map.Entry<Character, Integer> gMHS = (Entry<Character, Integer>) mHS.entrySet();
-						mHS.put(ch[leftToRight], mHS.get(gMHS.getValue()+1));
-					} else {
+						//Map.Entry<Character, Integer> gMHS = (Entry<Character, Integer>) mHS.entrySet();
+						//mHS.put(ch[leftToRight], mHS.get(gMHS.getValue()+1));
 						mHS.put(ch[leftToRight], count++);
+					} else {
+						mHS.put(ch[leftToRight], 1);
 					}
 				}
 			}
