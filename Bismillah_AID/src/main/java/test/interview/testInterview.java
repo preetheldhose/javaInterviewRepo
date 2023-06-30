@@ -857,6 +857,16 @@ public class testInterview {
 		logger("","");
 		logger("","");
 		
+		Set<String> set = new HashSet<String>();
+		set.add("one");
+		set.add("two");
+		set.add("three");
+		
+		Iterator setItr = set.iterator();
+		while(setItr.hasNext()) {
+			System.out.println("Values of set Iterator : " + setItr.next());
+		}
+		
 	}
 
 	// java string methods:
