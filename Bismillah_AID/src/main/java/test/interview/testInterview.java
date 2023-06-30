@@ -870,15 +870,21 @@ public class testInterview {
 		//Convert HashMap to ArrayList
 		collection.clear();
 		HashMap<String, String> hs = new HashMap<String, String>();
-		for(Entry<String, String> mhsMAR : hs.entrySet()) {
-			collection.add(mhsMAR.getKey());
-			collection.add(mhsMAR.getValue());
+		for(int i = 0; i < collection.size(); i++) {
+			hs.put(((List<String>) collection).get(i),"");
 		}
+		
 		int sizeOfCollection = collection.size();
 		logger("values of sizeOfCollection", sizeOfCollection);
 		for(String str : collection) {
 			System.out.println("Values of the array are as follows : "+ str);
 		}
+		
+		for(Entry<String, String> mhsMAR : hs.entrySet()) {
+			System.out.println(mhsMAR.getKey());
+			System.out.println(mhsMAR.getValue());
+		}
+
 		
 	}
 
