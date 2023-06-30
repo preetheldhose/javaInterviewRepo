@@ -704,8 +704,8 @@ public class testInterview {
 		Map<Character, Integer> mHS = new HashMap<Character, Integer>();
 		
 		for(int leftToRight = 0; leftToRight < len; leftToRight++) {
-			for(int rightToLeft = len-1; rightToLeft >= 0; rightToLeft--) {
-				if(ch[leftToRight] == ch[rightToLeft]) {
+			//for(int rightToLeft = len-1; rightToLeft >= 0; rightToLeft--) {
+			//	if(ch[leftToRight] == ch[rightToLeft]) {
 					if(!mHS.containsKey(ch[leftToRight])) {
 						//Character ncTr = new Character(ch[leftToRight]);
 						//String nStr = String.valueOf(ch[leftToRight]);
@@ -721,8 +721,8 @@ public class testInterview {
 					} else {
 						mHS.put(ch[leftToRight], 1);
 					}
-				}
-			}
+			//	}
+			//}
 		}
 		logger("value of hashMap key & respective values are as follows : ", mHS);
 	}
