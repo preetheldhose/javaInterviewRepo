@@ -99,7 +99,9 @@ public class testInterview {
 		
 		//allWaysToPrintCollections();
 		
-		longestCommonPrefixs();
+		//longestCommonPrefixs();
+		
+		retryLongestCommonPrefixs();
 
 	}
 
@@ -921,6 +923,24 @@ public class testInterview {
 
 	}
 	
+	public static void retryLongestCommonPrefixs() {
+		
+		//String[] strComPrefix = {"geeksforgeeks", "geeks", "geek", "geezer"};
+		String[] strComPrefix = {"geeksforgeeks"};
+		
+		int count = 0;
+		int previousCount = 0;
+		StringBuffer strBuf = new StringBuffer();
+		for(String str : strComPrefix) {
+			char[] ch = str.toCharArray();
+			int wholeLength = ch.length-1;
+			for(int i =0; i < ch.length; i++) {
+				System.out.println("i- values : " + ch[i]);
+
+			}
+		}
+		
+	}
 
 
 	// java string methods:
