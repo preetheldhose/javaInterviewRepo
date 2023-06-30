@@ -903,6 +903,9 @@ public class testInterview {
 				System.out.println("i- values : " + ch[i]);
 				for(int j = ch.length-1; j > 0; j--) {
 					System.out.println("j- values : " + ch[j]);
+					if(ch[i] == ch[j]) {
+						strBuf.append(ch[i]);
+					}
 				}				
 			}
 		}
