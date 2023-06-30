@@ -925,8 +925,8 @@ public class testInterview {
 	
 	public static void retryLongestCommonPrefixs() {
 		
-		//String[] strComPrefix = {"geeksforgeeks", "geeks", "geek", "geezer"};
-		String[] strComPrefix = {"geeksforgeeks"};
+		String[] strComPrefix = {"geeksforgeeks", "geeks", "geek", "geezer"};
+		//String[] strComPrefix = {"geeksforgeeks"};
 		
 		int count = 0;
 		int blankValueAdd = 0;
@@ -952,6 +952,18 @@ public class testInterview {
 		
 		for(Map.Entry<Character, Integer> mHSM : hs.entrySet()) {
 			System.out.println("Keys and values are as follows : " + mHSM.getKey() + " " + mHSM.getValue());
+		}
+		
+		HashMap<Character, Integer> hs2 = new HashMap<Character, Integer>();
+		for(Map.Entry<Character, Integer> mHSM2 : hs.entrySet()) {
+			//System.out.println("Keys and values are as follows : " + mHSM2.getKey() + " " + mHSM2.getValue());
+			if(mHSM2.getValue() > 4) {
+				hs2.put(mHSM2.getKey(), mHSM2.getValue());
+			}
+		}
+		
+		for(Map.Entry<Character, Integer> mHSM3 : hs2.entrySet()) {
+			System.out.println("Keys and values are as follows : " + mHSM3.getKey() + " " + mHSM3.getValue());
 		}
 		
 	}
