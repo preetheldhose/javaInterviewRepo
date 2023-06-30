@@ -951,7 +951,7 @@ public class testInterview {
 		}
 		
 		for(Map.Entry<Character, Integer> mHSM : hs.entrySet()) {
-			System.out.println("Keys and values are as follows : " + mHSM.getKey() + " " + mHSM.getValue());
+			//System.out.println("Keys and values are as follows : " + mHSM.getKey() + " " + mHSM.getValue());
 		}
 		
 		HashMap<Character, Integer> hs2 = new HashMap<Character, Integer>();
