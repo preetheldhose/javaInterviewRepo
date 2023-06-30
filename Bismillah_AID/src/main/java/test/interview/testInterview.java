@@ -751,7 +751,7 @@ public class testInterview {
 		}
 		
 		for(Map.Entry<Character, Integer> mHSM : hMS.entrySet()) {
-			System.out.println("Keys and values are : " + mHSM.getKey() + " " + mHSM.getKey());
+			System.out.println("Keys and values are : " + mHSM.getKey() + " " + mHSM.getValue());
 		}
 	}
 	
