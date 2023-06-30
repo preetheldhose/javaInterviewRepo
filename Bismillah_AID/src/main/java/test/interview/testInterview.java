@@ -835,7 +835,12 @@ public class testInterview {
 		}
 		
 		for (String str : collection) {
-			System.out.println("Values : " + str);
+			System.out.println("For 1st set of values : " + str);
+		}
+		
+		for(Iterator<String> itrL = collection.iterator(); itrL.hasNext();) {
+			System.out.println("For 2nd set of values : " + itrL.next());
+			
 		}
 		
 	}
