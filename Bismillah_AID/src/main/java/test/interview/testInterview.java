@@ -896,7 +896,7 @@ public class testInterview {
 		StringBuffer strBuf = new StringBuffer();
 		for(String str : strComPrefix) {
 			char[] ch = str.toCharArray();
-			for(int i =0; i < ch.length; i++) {
+			for(int i =0; i <= ch.length; i++) {
 				for(int j = ch.length-1; j >= 0; j++) {
 					if(ch[i] == ch[j]) {
 						count++;
