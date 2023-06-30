@@ -92,8 +92,8 @@ public class testInterview {
 		
 		//maxOccuranceOfStr
 		//maxOccuranceOfStr();
-		
-		maxOccuranceCharArray();
+		//maxOccuranceCharArray();
+		maxOccuranceCharacterArrayList();
 		
 		//printHashMapViaArrayList();
 
@@ -752,6 +752,15 @@ public class testInterview {
 		for(Map.Entry<Character, Integer> mHSM : hMS.entrySet()) {
 			System.out.println("Keys and values are : " + mHSM.getKey() + " " + mHSM.getValue());
 		}
+	}
+	
+	public static void maxOccuranceCharacterArrayList() {
+		String str = "This is a string";
+		ArrayList<Character> al = new ArrayList<Character>();
+		for(int i = 0; i < al.size(); i++) {
+			al.add(str.charAt(i));
+		}
+		System.out.println("ArrayList : " + al);
 	}
 	
 	public static void printHashMapViaArrayList() {
