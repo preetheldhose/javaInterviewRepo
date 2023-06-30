@@ -881,8 +881,8 @@ public class testInterview {
 		}
 		
 		for(Entry<String, String> mhsMAR : hs.entrySet()) {
-			System.out.println(mhsMAR.getKey());
-			System.out.println(mhsMAR.getValue());
+			System.out.println("hashMap key : " + mhsMAR.getKey());
+			System.out.println("hashMap value : " + mhsMAR.getValue());
 		}
 
 		
