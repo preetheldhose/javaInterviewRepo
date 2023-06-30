@@ -874,7 +874,8 @@ public class testInterview {
 			collection.add(mhsMAR.getKey());
 			collection.add(mhsMAR.getValue());
 		}
-		
+		int sizeOfCollection = collection.size();
+		logger("values", sizeOfCollection);
 		for(String str : collection) {
 			System.out.println("Values of the array are as follows : "+ str);
 		}
