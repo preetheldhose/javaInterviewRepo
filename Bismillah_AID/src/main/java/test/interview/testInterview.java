@@ -890,7 +890,8 @@ public class testInterview {
 	}
 	
 	public static void longestCommonPrefixs() {
-		String[] strComPrefix = {"geeksforgeeks", "geeks", "geek", "geezer"};
+		//String[] strComPrefix = {"geeksforgeeks", "geeks", "geek", "geezer"};
+		String[] strComPrefix = {"geeksforgeeks"};
 		int count = 0;
 		int previousCount = 1;
 		StringBuffer strBuf = new StringBuffer();
