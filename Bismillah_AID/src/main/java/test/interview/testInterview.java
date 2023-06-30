@@ -91,9 +91,9 @@ public class testInterview {
 		//partsOfStringCompared("HelloWorld");
 		
 		//maxOccuranceOfStr
-		//maxOccuranceOfStr();
+		maxOccuranceOfStr();
 		
-		printHashMapViaArrayList();
+		//printHashMapViaArrayList();
 
 	}
 
@@ -695,30 +695,30 @@ public class testInterview {
 	}
 	
 ////	//How to find the maximum occurring character in a given String?
-//	public static void maxOccuranceOfStr() {
-//		String str = "HelloWorld";
-//		char[] ch = str.toCharArray();
-//		int len = ch.length;
-//		int count = 0;
-//		Map<Character, Integer> mHS = new HashMap<Character, Integer>();
-//		
-//		for(int leftToRight = 0; leftToRight < len; leftToRight++) {
-//			for(int rightToLeft = len-1; rightToLeft >= 0; rightToLeft--) {
-//				if(ch[leftToRight] == ch[rightToLeft]) {
-//					if(!mHS.containsKey(ch[leftToRight])) {
-//						//Character ncTr = new Character(ch[leftToRight]);
-//						//String nStr = String.valueOf(ch[leftToRight]);
-//						//int nInt = Integer.parseInt(nStr);
-//						Map.Entry<Character, Integer> gMHS = (Entry<Character, Integer>) mHS.entrySet();
-//						mHS.put(ch[leftToRight], mHS.get(gMHS.getValue()+1));
-//					} else {
-//						mHS.put(ch[leftToRight], count++);
-//					}
-//				}
-//			}
-//		}
-//		logger("value of hashMap key & respective values are as follows : ", mHS);
-//	}
+	public static void maxOccuranceOfStr() {
+		String str = "HelloWorld";
+		char[] ch = str.toCharArray();
+		int len = ch.length;
+		int count = 0;
+		Map<Character, Integer> mHS = new HashMap<Character, Integer>();
+		
+		for(int leftToRight = 0; leftToRight < len; leftToRight++) {
+			for(int rightToLeft = len-1; rightToLeft >= 0; rightToLeft--) {
+				if(ch[leftToRight] == ch[rightToLeft]) {
+					if(!mHS.containsKey(ch[leftToRight])) {
+						//Character ncTr = new Character(ch[leftToRight]);
+						//String nStr = String.valueOf(ch[leftToRight]);
+						//int nInt = Integer.parseInt(nStr);
+						Map.Entry<Character, Integer> gMHS = (Entry<Character, Integer>) mHS.entrySet();
+						mHS.put(ch[leftToRight], mHS.get(gMHS.getValue()+1));
+					} else {
+						mHS.put(ch[leftToRight], count++);
+					}
+				}
+			}
+		}
+		logger("value of hashMap key & respective values are as follows : ", mHS);
+	}
 	
 	public static void printHashMapViaArrayList() {
 		
