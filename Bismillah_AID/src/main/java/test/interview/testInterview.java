@@ -94,6 +94,7 @@ public class testInterview {
 		//maxOccuranceOfStr();
 		//maxOccuranceCharArray();
 		maxOccuranceCharacterArrayList();
+		maxOccuranceCharacterArrayList()
 		
 		//printHashMapViaArrayList();
 
@@ -761,6 +762,17 @@ public class testInterview {
 			al.add(str.charAt(i));
 		}
 		System.out.println("ArrayList : " + al);
+		
+		HashMap<Character, Integer> hsM = new HashMap<Character, Integer>();
+		for(int j = 0; j < str.length(); j++) {
+			hsM.putIfAbsent(al.get(j), Collections.frequency(al, al.get(j)));			
+		}
+		
+		for(Map.Entry<Character, Integer> mhsM : hsM.entrySet()) {
+			System.out.println("Keys and values are as follows : " + mhsM.getKey() + " " + mhsM.getValue());
+			
+		}
+		
 	}
 	
 	public static void printHashMapViaArrayList() {
