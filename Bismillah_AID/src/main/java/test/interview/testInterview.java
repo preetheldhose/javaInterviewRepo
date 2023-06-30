@@ -871,7 +871,7 @@ public class testInterview {
 		//collection.clear();
 		HashMap<String, String> hs = new HashMap<String, String>();
 		for(int i = 0; i < collection.size(); i++) {
-			hs.put(((List<String>) collection).get(i),"");
+			hs.put(((List<String>) collection).get(i),"null");
 		}
 		
 		int sizeOfCollection = collection.size();
