@@ -700,6 +700,7 @@ public class testInterview {
 		char[] ch = str.toCharArray();
 		int len = ch.length;
 		int count = 0;
+		int valueAdd = 0;
 		Map<Character, Integer> mHS = new HashMap<Character, Integer>();
 		
 		for(int leftToRight = 0; leftToRight < len; leftToRight++) {
@@ -711,7 +712,8 @@ public class testInterview {
 						//int nInt = Integer.parseInt(nStr);
 						//Map.Entry<Character, Integer> gMHS = (Entry<Character, Integer>) mHS.entrySet();
 						//mHS.put(ch[leftToRight], mHS.get(gMHS.getValue()+1));
-						mHS.put(ch[leftToRight], mHS.get(ch[leftToRight]));
+						valueAdd = mHS.get(ch[leftToRight]) + 1;
+						mHS.put(ch[leftToRight], valueAdd);
 					} else {
 						mHS.put(ch[leftToRight], 1);
 					}
