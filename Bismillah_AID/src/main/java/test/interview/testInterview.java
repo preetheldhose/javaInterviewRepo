@@ -901,6 +901,8 @@ public class testInterview {
 			int wholeLength = ch.length-1;
 			for(int i =0; i < ch.length; i++) {
 				if(ch[i] == ch[wholeLength--]) {
+					System.out.println("ch[i] : " + ch[i]);
+					System.out.println("ch[wholeLength--] : " + ch[wholeLength]);
 					count++;
 					if(count >= previousCount) {
 						strBuf.append(ch[i]);
