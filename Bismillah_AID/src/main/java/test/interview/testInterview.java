@@ -899,7 +899,7 @@ public class testInterview {
 			char[] ch = str.toCharArray();
 			for(int i =0; i < ch.length; i++) {
 				System.out.println("i- values : " + ch[i]);
-			for(int j = ch.length-1; j >= 0; j++) {
+			for(int j = ch.length-1; j > 0; j++) {
 				System.out.println("j- values : " + ch[j]);
 //					if(ch[i] == ch[j]) {
 //						count++;
