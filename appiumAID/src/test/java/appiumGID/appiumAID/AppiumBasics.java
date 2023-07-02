@@ -21,6 +21,12 @@ public class AppiumBasics extends BaseTest{
 	public void appiumTest() throws MalformedURLException, InterruptedException {
 		//ConfigureAppium();
 		Thread.sleep(8000);
+		
+		/*
+		 * Use AccessibilityId, xpath, classname & androidUIAutomator to access the path of the components within the app.
+		 * 
+		 */
+		
 		driver.findElement(AppiumBy.accessibilityId("Preference")).click();
 		Thread.sleep(8000);
 		//tearDown();

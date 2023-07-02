@@ -26,21 +26,22 @@ public class BaseTest {
 		
 		/*
 		AndroidDriver Object: 
-		1. Appium code is written and sent to the Appium Server - which in then talks to
-		2. UIAutomator2 which in-turn talks to the simulator or the app in the Android device via Capabilities
+		1. Appium code is written and sent to the Appium Server - which in then talks to UIAutomator2 
+		2. Which in-turn talks to the simulator or the app in the Android device via Capabilities
 		*/
 		
 		UiAutomator2Options options = new UiAutomator2Options();
 		options.setDeviceName("RahulEmulator");
 		options.setApp("//Users//preetheldhose//eclipse-workspace//appiumAID//src//test//java//resources//APKFiles.zip");
-
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
 		
 	}
 	
 	@AfterClass
 	public void tearDown() throws InterruptedException {	
+		
 		driver.quit();
+		
 	}
 
 
