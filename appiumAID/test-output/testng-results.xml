@@ -2,15 +2,23 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-01T19:55:18 PDT" name="Default suite" finished-at="2023-07-01T19:55:44 PDT" duration-ms="25249">
+  <suite started-at="2023-07-02T12:11:23 PDT" name="Default suite" finished-at="2023-07-02T12:11:49 PDT" duration-ms="25727">
     <groups>
     </groups>
-    <test started-at="2023-07-01T19:55:18 PDT" name="Default test" finished-at="2023-07-01T19:55:44 PDT" duration-ms="25249">
+    <test started-at="2023-07-02T12:11:23 PDT" name="Default test" finished-at="2023-07-02T12:11:49 PDT" duration-ms="25727">
       <class name="appiumGID.appiumAID.AppiumBasics">
-        <test-method signature="appiumTest()[pri:0, instance:appiumGID.appiumAID.AppiumBasics@3e2e18f2]" started-at="2023-07-01T19:55:19 PDT" name="appiumTest" finished-at="2023-07-01T19:55:44 PDT" duration-ms="25204" status="PASS">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:appiumGID.appiumAID.AppiumBasics@4facf68f]" started-at="2023-07-02T12:11:23 PDT" name="ConfigureAppium" finished-at="2023-07-02T12:11:31 PDT" duration-ms="7863" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ConfigureAppium -->
+        <test-method signature="appiumTest()[pri:0, instance:appiumGID.appiumAID.AppiumBasics@4facf68f]" started-at="2023-07-02T12:11:31 PDT" name="appiumTest" finished-at="2023-07-02T12:11:48 PDT" duration-ms="17333" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- appiumTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:appiumGID.appiumAID.AppiumBasics@4facf68f]" started-at="2023-07-02T12:11:48 PDT" name="tearDown" finished-at="2023-07-02T12:11:49 PDT" duration-ms="474" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- appiumGID.appiumAID.AppiumBasics -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
